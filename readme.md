@@ -8,7 +8,8 @@ The Model Context Protocol (MCP) is a framework designed to standardize the way 
 
 For more information about mxHERO's multi-email account service, including architecture, optimizations, etc. [read here](https://mxhero.com).
 
-**Benefits of Go for MCP deployment**
+**Why Go for MCP deployment**
+
 Unlike Python or Javascript MCPs, Go compiles to native binary. Once compiled for a target architecture (e.g., Mac ARM, Windows Intel) and installed, no additional dependencies are required on the user's device.
 
 
@@ -74,6 +75,8 @@ After `make` is run it will place the program (binary) in the `bin`folder. Copy 
 If not installing with an installation package do the following:
 
 1. Copy the binary (of matching operating systems and architecture) to the user's computer. Place the file somewhere the user has permissions to access. For example, the user's home directory.
+
+
 2. Ensure the user has permission to run the program (execute)
    - For example, on Mac & Linux `chmod 755 mxmcp`
 
@@ -85,8 +88,11 @@ The following is an example configuration JSON for common clients (e.g., Claude)
 1. Edit your `claude_desktop_config`.json
    * You make need to create the file if it does not already exist.
 
+
 2. Add the following JSON below, where:
-   * Note mxhero-mcp-server JSON should be added alongside any other MCP servers of your configuration. 
+   * Note mxhero-mcp-server JSON should be added alongside any other MCP servers of your configuration.
+   * Be sure to put the full path as the command value. For example:
+     * `/Users/bob/mxmcp`
    * Parameters are:
      * '-t' (token) parameter is required.
      * '-d' is an optional custom tool description.
