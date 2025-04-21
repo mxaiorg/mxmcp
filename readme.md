@@ -92,7 +92,7 @@ The following is an example configuration JSON for common clients (e.g., Claude)
 2. Add the following JSON below, where:
    * Note mxhero-mcp-server JSON should be added alongside any other MCP servers of your configuration.
    * Be sure to put the full path as the command value. For example:
-     * `/Users/bob/mxmcp`
+     * `/Users/bob/mxmcp-mac-arm`
    * Parameters are:
      * '-t' (token) parameter is required.
      * '-d' is an optional custom tool description.
