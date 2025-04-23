@@ -12,8 +12,12 @@ For more information about mxHERO's multi-email account service, including archi
 
 Unlike Python or Javascript MCPs, Go compiles to native static binary. Once compiled for a target architecture (e.g., Mac ARM, Windows Intel) and installed, no additional dependencies (software) are required on the user's device.
 
+## Quickstart
 
-### Alternate versions
+1. To get started quickly, see the prebuilt binaries section below for your operating system and machine architecture.
+2. Follow the installation instructions.
+
+## Alternate versions
 
 A Python version is in development and will be linked here.
 
@@ -73,9 +77,9 @@ For convenience the `prebuilt` folder contains prebuilt binaries and signed inst
 
 ## Installation
 
-If not installing with an installation package do the following:
+If **NOT** installing with an installation package, do the following:
 
-1. Copy the binary (of matching operating systems and architecture) to the user's computer. Place the file somewhere the user has permissions to access. For example, the user's home directory.
+1. Copy the binary (of matching operating systems and architecture) to the user's computer. Place the file somewhere the user has permission to access. For example, the user's home directory.
 
 
 2. Ensure the user has permission to run the program (execute)
