@@ -10,7 +10,7 @@ For more information about mxHERO's multi-email account service, including archi
 
 **Why Go for MCP deployment**
 
-Unlike Python or Javascript MCPs, Go compiles to native binary. Once compiled for a target architecture (e.g., Mac ARM, Windows Intel) and installed, no additional dependencies are required on the user's device.
+Unlike Python or Javascript MCPs, Go compiles to native static binary. Once compiled for a target architecture (e.g., Mac ARM, Windows Intel) and installed, no additional dependencies (software) are required on the user's device.
 
 
 ### Alternate versions
@@ -67,8 +67,9 @@ After `make` is run it will place the program (binary) in the `bin`folder. Copy 
 **Note**
 * Some platforms, like MacOS, will require additional permissions before allowing the program to be run on another machine.
 
-**Prebuilt Binaries**
-* For convenience the `prebuilt` contains prebuilt binaries and signed installation packages. 
+## Prebuilt Binaries
+For convenience the `prebuilt` folder contains prebuilt binaries and signed installation packages. See the "readme" file in that folder for more information.
+
 
 ## Installation
 
@@ -112,3 +113,5 @@ The following is an example configuration JSON for common clients (e.g., Claude)
   }
 }
 ```
+
+3. If Claude is running, restart it.
