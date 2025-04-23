@@ -9,3 +9,27 @@ mxmcp-mac-arm-installer.pkg
 * Double-click the package to install.
 * md5sum
   * bbc1a049b2372ed10e00aebb2baef8bc  mxmcp-mac-arm-installer.pkg
+
+#### Configuration
+
+The Mac package installs mxmcp-mac-arm to your `/usr/local/bin` directory. As such, set the command field in your configuration to:
+
+`/usr/local/bin/mxmcp-mac-arm`
+
+For example:
+
+```json
+{
+  "mcpServers": {
+    "mxhero-mcp-server": {
+      "command": "/usr/local/bin/mxmcp-mac-arm",
+      "args": [
+        "-t",
+        "<token>",
+        "-d",
+        "<optional custom tool description>"
+      ]
+    }
+  }
+}
+```
