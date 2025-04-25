@@ -23,3 +23,8 @@ windows-intel:
 	go build -v \
 	-ldflags="-X main.ApiHost=https://lab4-api.mxhero.com" \
 	-o bin/mxmcp.exe *.go
+
+# Local mac testing
+mac-arm-install: mac-arm
+	chmod +x bin/mxmcp-mac-arm
+	cp bin/mxmcp-mac-arm /usr/local/bin

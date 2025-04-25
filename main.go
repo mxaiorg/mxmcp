@@ -35,7 +35,7 @@ func main() {
 	defaultDescription := `Search query for emails from multiple email accounts.
 
 Args:
-- query: The user's email related query or statement. Create a full sentence that best reflects what the user wants regarding emails. If the user is requesting a specific email, refer to tne note below.
+- query: The user's query or statement related to email. Create a full sentence that best reflects what the user wants regarding emails. If the user is requesting a specific email, refer to tne notes below.
 
 Example:
 - query: "Get me the email from Bob about the new product"
@@ -53,8 +53,10 @@ Each email entry returned is a JSON object with the following fields:
 - msgId: the email id
 - link: a URL to view the email
 
-Note: when the user requests a specific email and you have the msgId,
-indicate and use the msgId in your request or simply provide the link, if you have it.`
+Notes:
+- When the user requests a specific email and you have the msgId,
+indicate and use the msgId in your request or simply provide the link, if you have it.
+- Do not assume the user is asking about their own email.`
 
 	description := flag.String("d", defaultDescription, "Tool description")
 	flag.StringVar(&Token, "t", "", "Token for authentication")
