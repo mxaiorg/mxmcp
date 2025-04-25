@@ -22,7 +22,7 @@ This folder contains pre-built binaries to facilitate deployment.
 
 ### Mac
 
-The Mac package installs mxmcp-mac-arm to your `/usr/local/bin` directory. As such, set the command field in your configuration to:
+The Mac package installs mxmcp-mac-arm/intel to your `/usr/local/bin` directory. As such, set the command field in your configuration to:
 
 * Mac ARM: `/usr/local/bin/mxmcp-mac-arm`
 * Mac Intel: `/usr/local/bin/mxmcp-mac-intel`
