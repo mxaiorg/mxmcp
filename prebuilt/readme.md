@@ -8,7 +8,7 @@ mxmcp-mac-arm-installer.pkg
 
 * Double-click the package to install.
 * md5sum
-  * 17c66a6921ccc63f1df2356aa677800c  mxmcp-mac-arm-installer.pkg
+  * a4dc6d2c1f3a477871fff0500e9a93e0  mxmcp-mac-arm-installer.pkg
 
 #### Configuration
 
