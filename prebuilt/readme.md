@@ -16,7 +16,7 @@ This folder contains pre-built binaries to facilitate deployment.
 
 * Double-click the package to install.
 * md5sum
-  * 65a31c88ffe1f78f781b25099c71e545  prebuilt/mxmcp-mac-intel-installer.pkg
+  * 65a31c88ffe1f78f781b25099c71e545  mxmcp-mac-intel-installer.pkg
 
 ## Configuration
 
