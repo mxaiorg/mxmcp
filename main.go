@@ -56,7 +56,8 @@ Each email entry returned is a JSON object with the following fields:
 Notes:
 - When the user requests a specific email and you have the msgId,
 indicate and use the msgId in your request or simply provide the link, if you have it.
-- Do not assume the user is asking about their own email.`
+- Do not assume the user is asking about their own email.
+- Always share the link to the email with the user.`
 
 	description := flag.String("d", defaultDescription, "Tool description")
 	flag.StringVar(&Token, "t", "", "Token for authentication")
