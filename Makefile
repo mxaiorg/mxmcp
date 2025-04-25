@@ -1,10 +1,10 @@
 linux-intel:
 	env GOOS=linux GOARCH=amd64 go build -v -o mxmcp *.go
 
-dev-mac:
+mac-arm-local:
 	go build -v \
 	-ldflags="-X main.ApiHost=http://localhost:9080" \
-	-o mxmcp-dev *.go
+	-o bin/mxmcp-local *.go
 
 mac-arm:
 	env CGO_ENABLED=0 GOOS=darwin GOARCH=arm64 \
@@ -25,6 +25,10 @@ windows-intel:
 	-o bin/mxmcp.exe *.go
 
 # Local mac testing
+mac-local-install: mac-arm-local
+	chmod +x bin/mxmcp-local
+	cp bin/mxmcp-local /usr/local/bin/mxmcp-mac-arm
+
 mac-arm-install: mac-arm
 	chmod +x bin/mxmcp-mac-arm
-	cp bin/mxmcp-mac-arm /usr/local/bin
+	cp bin/mxmcp-mac-arm /usr/local/bin/mxmcp-mac-arm
