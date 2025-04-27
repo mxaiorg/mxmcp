@@ -1,40 +1,31 @@
 package main
 
 import (
+	"context"
+	"errors"
 	"fmt"
-	"github.com/ThinkInAIXYZ/go-mcp/protocol"
+	"github.com/mark3labs/mcp-go/mcp"
 	"io"
 	"log"
 	"net/http"
 )
 
-type SimpleSearch struct {
-	Query string `json:"query" jsonschema:"required,description=The user query related to email"`
-}
-
-func DevEmailSearch(req *protocol.CallToolRequest) (*protocol.CallToolResult, error) {
-	var searchReq SimpleSearch
-	if argErr := protocol.VerifyAndUnmarshal(req.RawArguments, &searchReq); argErr != nil {
-		return nil, argErr
+func EmailSearchTool(ctx context.Context, request mcp.CallToolRequest) (*mcp.CallToolResult, error) {
+	queryStr, ok := request.Params.Arguments["query"].(string)
+	if !ok {
+		return nil, errors.New("query must be a string")
 	}
 
-	response, err := query(searchReq.Query)
+	response, err := query(ctx, queryStr)
 	if err != nil {
 		log.Println(err)
 		return nil, err
 	}
 
-	return &protocol.CallToolResult{
-		Content: []protocol.Content{
-			protocol.TextContent{
-				Type: "text",
-				Text: response,
-			},
-		},
-	}, nil
+	return mcp.NewToolResultText(response), nil
 }
 
-func query(query string) (string, error) {
+func query(_ context.Context, query string) (string, error) {
 	client := &http.Client{}
 
 	endPointUrl := fmt.Sprintf("%s/gpt/email/query", ApiHost)
