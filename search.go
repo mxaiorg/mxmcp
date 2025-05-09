@@ -8,6 +8,7 @@ import (
 	"io"
 	"log"
 	"net/http"
+	"time"
 )
 
 func EmailSearchTool(ctx context.Context, request mcp.CallToolRequest) (*mcp.CallToolResult, error) {
@@ -37,6 +38,8 @@ func query(_ context.Context, query string) (string, error) {
 	// Add query parameter
 	q := req.URL.Query()
 	q.Add("q", query)
+	q.Add("t", time.Now().Local().Format(time.RFC3339))
+
 	req.URL.RawQuery = q.Encode()
 
 	// Add Bearer token to the Authorization header

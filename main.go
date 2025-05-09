@@ -26,6 +26,8 @@ type UserData struct {
 }
 
 func main() {
+	log.SetFlags(log.Lshortfile)
+
 	// Get flags
 	description := flag.String("d", kSearchDescription, "Tool description")
 	flag.StringVar(&Token, "t", "", "Token for authentication")
