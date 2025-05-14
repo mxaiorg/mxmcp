@@ -11,6 +11,7 @@ Args:
 
 Example:
 - query: "Get me the email from Bob about the new product"
+- query: "Summarize the email from Sam."
 
 Return:
 It will return details about the search results plus 
@@ -28,4 +29,5 @@ Each email entry returned is a JSON object with the following fields:
 Notes:
 - When the user requests a specific email and you have the msgId, indicate and use the msgId in your request or simply provide the link, if you have it.
 - Only assume the user is asking about their own email if they EXPLICITLY IMPLY it in the query.
-- Always share the link to the email with the user.`
+- Always share the link to the email with the user.
+- If the user is requesting a "summary" (or similar) of a specific email, include the word "summary" in the query argument sentence.`

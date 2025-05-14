@@ -29,7 +29,7 @@ func main() {
 	log.SetFlags(log.Lshortfile)
 
 	// Get flags
-	description := flag.String("d", kSearchDescription, "Tool description")
+	description := flag.String("d", kSearchDescription, "Search tool description")
 	flag.StringVar(&Token, "t", "", "Token for authentication")
 	flag.Parse()
 
