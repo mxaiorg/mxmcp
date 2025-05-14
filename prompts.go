@@ -4,30 +4,35 @@ package main
 	Tool descriptions
 */
 
-const kSearchDescription = `Search query for emails from multiple email accounts.
+const kSearchDescription = `Search request for emails from multiple email accounts.
 
 Args:
-- query: The user's query or statement related to email. Include any parts concerning how the search should be done and how the results should be presented. Create a full sentence that best reflects what the user wants regarding emails. If the user is requesting a specific email, refer to tne notes below.
+	input (str): 	
+		Set the 'input' parameter to the EXACT STRING as written by the user.
+		ONLY alter the request if the user explicitly asks for a specific email
+		AND you have its msgId. In this case refer to the notes below.
 
-Example:
-- query: "Get me the email from Bob about the new product"
-- query: "Summarize the email from Sam."
+Returns:
 
-Return:
-It will return details about the search results plus 
-a list of emails that match the query - if any.
+	This function will return details about the search results plus 
+	a list of emails that match the user's request - if any.
 
-Each email entry returned is a JSON object with the following fields:
-- content: the email content
-- subject: the email subject
-- from: the email sender
-- to: the email recipient
-- date: the email date
-- msgId: the email id
-- link: a URL to view the email
+	Each email entry returned is a JSON object with the following fields:
+	- content: the email content
+	- subject: the email subject
+	- from: the email sender
+	- to: the email recipient
+	- date: the email date
+	- msgId: the email id
+	- link: a URL to view the email
 
 Notes:
-- When the user requests a specific email and you have the msgId, indicate and use the msgId in your request or simply provide the link, if you have it.
-- Only assume the user is asking about their own email if they EXPLICITLY IMPLY it in the query.
-- Always share the link to the email with the user.
-- If the user is requesting a "summary" (or similar) of a specific email, include the word "summary" in the query argument sentence.`
+	- When the user requests a specific email and you have the msgId, indicate and use the msgId in your request or simply provide the link, if you have it.
+	- Only assume the user is asking about their own email if they EXPLICITLY IMPLY it in the input.
+	- Always share the link to the email with the user.
+	- If the user is requesting a "summary" (or similar) of a specific email, include the word "summary" in the input argument sentence.
+
+IMPORTANT:
+	BE SURE TO PASS THE ENTIRE STRING AS WRITTEN BY THE USER TO THE INPUT ARGUMENT.
+	DO NOT ALTER THE STRING, UNLESS REQUESTED TO GET A SPECIFIC EMAIL 
+	AND YOU HAVE THE MSGID.`

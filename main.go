@@ -48,9 +48,9 @@ func main() {
 
 	search := mcp.NewTool("email_search",
 		mcp.WithDescription(*description),
-		mcp.WithString("query",
+		mcp.WithString("input",
 			mcp.Required(),
-			mcp.Description("The user query related to email."),
+			mcp.Description("The user's full input"),
 		),
 	)
 

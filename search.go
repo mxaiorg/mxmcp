@@ -12,9 +12,9 @@ import (
 )
 
 func EmailSearchTool(ctx context.Context, request mcp.CallToolRequest) (*mcp.CallToolResult, error) {
-	queryStr, ok := request.Params.Arguments["query"].(string)
-	if !ok {
-		return nil, errors.New("query must be a string")
+	queryStr := mcp.ParseString(request, "input", "")
+	if queryStr == "" {
+		return nil, errors.New("input must be a string")
 	}
 
 	response, err := query(ctx, queryStr)
