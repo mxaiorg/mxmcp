@@ -50,7 +50,7 @@ func main() {
 		mcp.WithDescription(*description),
 		mcp.WithString("query",
 			mcp.Required(),
-			mcp.Description("The user query related to email"),
+			mcp.Description("The user query related to email."),
 		),
 	)
 

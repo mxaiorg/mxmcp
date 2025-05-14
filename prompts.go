@@ -7,7 +7,7 @@ package main
 const kSearchDescription = `Search query for emails from multiple email accounts.
 
 Args:
-- query: The user's query or statement related to email. Create a full sentence that best reflects what the user wants regarding emails. If the user is requesting a specific email, refer to tne notes below.
+- query: The user's query or statement related to email. Include any parts concerning how the search should be done and how the results should be presented. Create a full sentence that best reflects what the user wants regarding emails (e.g., 'summarize'). If the user is requesting a specific email, refer to tne notes below.
 
 Example:
 - query: "Get me the email from Bob about the new product"
