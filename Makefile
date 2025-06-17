@@ -25,10 +25,16 @@ windows-intel:
 	-o bin/mxmcp.exe *.go
 
 # Local mac testing
-mac-local-install: mac-arm-local
+mac-tmp-local: mac-arm-local
 	chmod +x bin/mxmcp-local
-	cp bin/mxmcp-local /usr/local/bin/mxmcp-mac-arm
+	cp bin/mxmcp-local /tmp/mxmcp-mac-arm
 
+mac-tmp-remote: mac-arm
+	chmod +x bin/mxmcp-mac-arm
+	cp bin/mxmcp-mac-arm /tmp/mxmcp-mac-arm
+
+# Note, might not work for Mac security reasons if
+# package has already been installed.
 mac-arm-install: mac-arm
 	chmod +x bin/mxmcp-mac-arm
 	cp bin/mxmcp-mac-arm /usr/local/bin/mxmcp-mac-arm

@@ -2,7 +2,6 @@ package main
 
 import (
 	"context"
-	"errors"
 	"fmt"
 	"github.com/mark3labs/mcp-go/mcp"
 	"io"
@@ -12,9 +11,10 @@ import (
 )
 
 func EmailSearchTool(ctx context.Context, request mcp.CallToolRequest) (*mcp.CallToolResult, error) {
-	queryStr := mcp.ParseString(request, "input", "")
-	if queryStr == "" {
-		return nil, errors.New("input must be a string")
+	//queryStr := mcp.ParseString(request, "query", "")
+	queryStr, queryErr := request.RequireString("query")
+	if queryErr != nil {
+		return nil, queryErr
 	}
 
 	response, err := query(ctx, queryStr)
