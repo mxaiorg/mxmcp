@@ -66,7 +66,9 @@ For more operating systems and architectures see Go compilation documentation.
 make mac-arm
 ```
 
-After `make` is run it will place the program (binary) in the `bin`folder. Copy this binary to the user's computer and see the configuration instructions below.
+After `make` is run it will place the program (binary) in the `bin`folder. Copy this binary to the user's computer and see the configuration instructions below. 
+
+For example: `cp bin/mxmcp-mac-arm ~user`
 
 **Note**
 * Some platforms, like MacOS, will require additional permissions before allowing the program to be run on another machine.
@@ -96,7 +98,7 @@ The following is an example configuration JSON for common clients (e.g., Claude)
 
 2. Add the following JSON below, where:
    * Note mxhero-mcp-server JSON should be added alongside any other MCP servers of your configuration.
-   * Be sure to put the full path as the command value. For example:
+   * Be sure to put the **full path** as the command value. For example:
      * `/Users/bob/mxmcp-mac-arm`
    * Parameters are:
      * '-t' (token) parameter is required.
