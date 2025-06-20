@@ -37,9 +37,4 @@ Notes:
 	- Always share the link to the email with the user.
 	- If the user is requesting a "summary" (or similar) of a specific email, include the word "summary" in the query argument sentence.
 	- If the user's question is statistical in nature, like, how many emails, or how many emails were sent in a specific month, include the word "statistical" in the query argument sentence.'
-	- If searching for related emails, include the word "related" in the query argument sentence and be sure to use information from the original email like the From, To, Subject, etc. when formulating successive queries.
-
-IMPORTANT:
-	BE SURE TO PASS THE ENTIRE STRING AS WRITTEN BY THE USER TO THE QUERY ARGUMENT.
-	DO NOT ALTER THE USER'S INPUT, UNLESS REQUESTED TO GET A SPECIFIC EMAIL 
-	AND YOU HAVE THE MSGID OR YOU ARE ADDING ADDITIONAL WORDS AS DESCRIBED ABOVE.`
+	- If searching for related emails, include the word "related" in the query argument sentence and be sure to use information from the original email like the From, To, Subject, etc. when formulating successive queries.`
