@@ -4,14 +4,16 @@ package main
 	Tool descriptions
 */
 
-const kQueryArgument = `Set the 'query' parameter to the phrase or text provided by the user.
-ONLY alter the request if the user explicitly asks for a specific email AND you have its msgId.`
+const kQueryArgument = `An email search query.`
 
 const kSearchDescription = `Search request for emails from multiple email accounts.
 
 Args:
 	query (str): 	
-		Set the 'query' parameter to the text as written by the user.
+		Set the 'query' parameter to a phrase that best describes the user's request'.
+		Try to preserve the original sentence as much as possible. Be sure to include
+		aspects that relate to the email subject, sender, recipients, dates, etc.
+		Preserve or use words like, From, To, etc. Include any date ranges if applicable.
 		ONLY alter the request if the user explicitly asks for a specific email
 		AND you have its msgId. In this case refer to the notes below.
 
@@ -35,6 +37,7 @@ Notes:
 	- Always share the link to the email with the user.
 	- If the user is requesting a "summary" (or similar) of a specific email, include the word "summary" in the query argument sentence.
 	- If the user's question is statistical in nature, like, how many emails, or how many emails were sent in a specific month, include the word "statistical" in the query argument sentence.'
+	- If searching for related emails, include the word "related" in the query argument sentence and be sure to use information from the original email like the From, To, Subject, etc. when formulating successive queries.
 
 IMPORTANT:
 	BE SURE TO PASS THE ENTIRE STRING AS WRITTEN BY THE USER TO THE QUERY ARGUMENT.
