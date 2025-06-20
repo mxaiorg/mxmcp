@@ -8,7 +8,7 @@ This folder contains pre-built binaries to facilitate deployment.
 
 * Double-click the package to install.
 * md5sum
-  * 46b4153f54d26b9ad703cd7a4978b8dc mxmcp-mac-arm-installer.pkg
+  * c0e1ef11320f4e44b90f9c7a6e865da6  prebuilt/mxmcp-mac-arm-installer.pkg
 
 ## Mac AMD (Apple Intel)
 
@@ -16,7 +16,7 @@ This folder contains pre-built binaries to facilitate deployment.
 
 * Double-click the package to install.
 * md5sum
-  * f8b106e5a53244c47fbd9f58a54ef086 mxmcp-mac-intel-installer.pkg
+  * 17d713abf548d926402dae896e65b1d8  prebuilt/mxmcp-mac-intel-installer.pkg
 
 ## Configuration
 
