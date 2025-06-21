@@ -10,12 +10,12 @@ const kSearchDescription = `Search request for emails from multiple email accoun
 
 Args:
 	query (str): 	
-		Set the 'query' parameter to a phrase that best describes the user's request'.
-		Try to preserve the original sentence as much as possible. Be sure to include
+		Set the 'query' parameter to a search sentence reflecting the user's request.
+		The sentence should be a specific and concise full sentence. Be sure to include
 		aspects that relate to the email subject, sender, recipients, dates, etc.
-		Preserve or use words like, From, To, etc. Include any date ranges if applicable.
-		ONLY alter the request if the user explicitly asks for a specific email
-		AND you have its msgId. In this case refer to the notes below.
+		Use words like, From, To, etc. Include any date ranges if applicable.
+		If the user explicitly asks for a specific email AND you have its msgId,
+		refer to the notes below.
 
 Returns:
 
