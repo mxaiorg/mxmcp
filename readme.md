@@ -19,7 +19,7 @@ Unlike Python or Javascript MCPs, Go compiles to native static binary. Once comp
 
 ## Alternate versions
 
-A Python version is in development and will be linked here.
+A Python version can be found [here](https://github.com/mxaiorg/mxmcp-py).
 
 ## Tools implemented
 
@@ -93,7 +93,7 @@ If **NOT** installing with an installation package, do the following:
 The following is an example configuration JSON for common clients (e.g., Claude). For details of installing MCPs in Claude see https://modelcontextprotocol.io/quickstart/user
 
 1. Edit your `claude_desktop_config`.json
-   * You make need to create the file if it does not already exist.
+   * You may need to create the file if it does not already exist.
 
 
 2. Add the following JSON below, where:
