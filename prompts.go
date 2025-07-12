@@ -14,7 +14,7 @@ Args:
 		The sentence should be a specific and concise full sentence. Be sure to include
 		aspects that relate to the email subject, sender, recipients, dates, etc.
 		Use words like, From, To, etc. Include any date ranges if applicable.
-		If the user explicitly asks for a specific email AND you have its msgId,
+		If you need to search for specific emails AND you have the msgIds,
 		refer to the notes below.
 
 Returns:
@@ -30,11 +30,12 @@ Returns:
 	- date: the email date
 	- msgId: the email id
 	- link: a URL to view the email
+	- related: a list of related emails by msgId
 
 Notes:
-	- When the user requests a specific email and you have the msgId, indicate and use the msgId in your request or simply provide the link, if you have it.
+	- When searching for specific emails and you have the msgIds, indicate and use the msgId in your request or simply provide the links, if you have them.
 	- Only assume the user is asking about their own email if they EXPLICITLY IMPLY it in the query.
 	- Always share the link to the email with the user.
 	- If the user is requesting a "summary" (or similar) of a specific email, include the word "summary" in the query argument sentence.
 	- If the user's question is statistical in nature, like, how many emails, or how many emails were sent in a specific month, include the word "statistical" in the query argument sentence.'
-	- If searching for related emails, include the word "related" in the query argument sentence and be sure to use information from the original email like the From, To, Subject, etc. when formulating successive queries.`
+	- To search for related emails, conduct a search using the msgIds in the "related" field if it is present.`
