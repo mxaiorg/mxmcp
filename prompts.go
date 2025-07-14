@@ -38,4 +38,4 @@ Notes:
 	- Always share the link to the email with the user.
 	- If the user is requesting a "summary" (or similar) of a specific email, include the word "summary" in the query argument sentence.
 	- If the user's question is statistical in nature, like, how many emails, or how many emails were sent in a specific month, include the word "statistical" in the query argument sentence.'
-	- To search for related emails, conduct a search using the msgIds in the "related" field if it is present.`
+	- To search for missing related emails, conduct a search using the msgIds in the "related" field if it is present.`
