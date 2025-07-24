@@ -31,6 +31,7 @@ mac-tmp-local: mac-arm-local
 
 mac-tmp-remote: mac-arm
 	chmod +x bin/mxmcp-mac-arm
+	rm /tmp/mxmcp-mac-arm
 	cp bin/mxmcp-mac-arm /tmp/mxmcp-mac-arm
 
 # Note, might not work for Mac security reasons if

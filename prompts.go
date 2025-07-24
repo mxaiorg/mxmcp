@@ -28,9 +28,10 @@ Returns:
 	- from: the email sender
 	- to: the email recipient
 	- date: the email date
-	- msgId: the email id
+	- msgId: the email id (message ID)
 	- link: a URL to view the email
 	- related: a list of related emails by msgId
+	- missingRelated: a list of related emails by msgId missing from the search results
 
 Notes:
 	- When searching for specific emails and you have the msgIds, indicate and use the msgId in your request or simply provide the links, if you have them.
@@ -38,4 +39,4 @@ Notes:
 	- Always share the link to the email with the user.
 	- If the user is requesting a "summary" (or similar) of a specific email, include the word "summary" in the query argument sentence.
 	- If the user's question is statistical in nature, like, how many emails, or how many emails were sent in a specific month, include the word "statistical" in the query argument sentence.'
-	- To search for missing related emails, conduct a search using the msgIds in the "related" field if it is present.`
+	- To search for related emails, conduct a search using the msgIds in the "missingRelated" field if it is present.`
