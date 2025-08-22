@@ -27,6 +27,7 @@ windows-intel:
 # Local mac testing
 mac-tmp-local: mac-arm-local
 	chmod +x bin/mxmcp-local
+	rm /tmp/mxmcp-mac-arm
 	cp bin/mxmcp-local /tmp/mxmcp-mac-arm
 
 mac-tmp-remote: mac-arm

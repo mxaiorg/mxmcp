@@ -4,11 +4,23 @@
 
 This MCP (model context protocol) server is a Go project that provides access to mxHERO's multi-account email search service.
 
-The Model Context Protocol (MCP) is a framework designed to standardize the way models interact with various data sources and services. In this project, MCP is used to facilitate seamless integration to emails captured by mxHERO Mail2Cloud. Mail2Cloud is designed to selectively capture emails from one or more accounts. The selection of emails can be finely controlled by powerful filters examining almost any aspect of messages and their attachments.
+The Model Context Protocol (MCP) is a framework designed to standardize the way models interact with various data sources and services. In this project, MCP is used to facilitate seamless integration to mxHERO Mail2Cloud Advanced. Mail2Cloud Advanced is a high performance data service for a company's email data. Mail2Cloud Advanced connects to company email services and optimizes the content for fast, scalable and secure access by AI solutions.
 
-For more information about mxHERO's multi-email account service, including architecture, optimizations, etc. [read here](https://mxhero.com).
+### Architecture
+Mail2Cloud is designed to selectively capture emails from one or more accounts. The selection of emails can be finely controlled by powerful filters examining any aspect of messages and their attachments. Captured emails are then optimized and stored into an isolated tenant in a vector database designed for email related searches. This MCP accesses the stored emails in the tenant through authenticated access credentials.
 
-**Why Go for MCP deployment**
+### Advantages
+Solutions built with Mail2Cloud Advanced MCP outperforms other AI solutions with regards to email data search & knowledge recovery ([study](https://medium.com/datadriveninvestor/ai-email-retrieval-benchmark-how-purpose-built-ai-tools-outperform-generic-solutions-6fcd6d560c8f))
+* Provides secure links to original emails (safe from accidental user deletion, etc.)
+* Allows LLMs to search massive email repositories, far beyond their context window restraints.
+
+### Demo Accounts
+
+To facilitate exploration of this MCP, mxHERO provides demo accounts that are pre-loaded with thousands of emails. More about the demo emails can be found [here](https://mxhero.helpjuice.com/en_US/mxhero-ai/demo-account-for-ai-testing).
+
+For more information see: [mxHERO Mail2Cloud Advanced](https://www.mxhero.com/advanced-ai) multi-email account service, including [architecture](https://mxhero.helpjuice.com/en_US/mxhero-ai/mxmcp#architecture-8), and optimizations.
+
+### Why Go for MCP deployment
 
 Unlike Python or Javascript MCPs, Go compiles to native static binary. Once compiled for a target architecture (e.g., Mac ARM, Windows Intel) and installed, no additional dependencies (software) are required on the user's device.
 
@@ -20,6 +32,12 @@ Unlike Python or Javascript MCPs, Go compiles to native static binary. Once comp
 ## Alternate versions
 
 A Python version can be found [here](https://github.com/mxaiorg/mxmcp-py).
+
+### Streamable HTTP
+This MCP repo is the 'stdio' variant. HTTP options exist at the following addresses:
+* [https://lab4-api.mxhero.com/mcp/connect](https://lab4-api.mxhero.com/mcp/connect)
+  (streamable HTTP)
+* [https://lab4-api.mxhero.com/mcp/sse](https://lab4-api.mxhero.com/mcp/sse) (Legacy SSE)
 
 ## Tools implemented
 
