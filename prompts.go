@@ -9,7 +9,7 @@ const kQueryArgument = `An email search query.`
 const kSearchDescription = `Search request for emails from multiple email accounts.
 
 Args:
-	query (str): 	
+	query (str):
 		Set the 'query' parameter to a search sentence reflecting the user's request.
 		The sentence should be a specific and concise full sentence. Be sure to include
 		aspects that relate to the email subject, sender, recipients, dates, etc.
@@ -19,7 +19,7 @@ Args:
 
 Returns:
 
-	This function will return details about the search results plus 
+	This function will return details about the search results plus
 	a list of emails that match the user's request - if any.
 
 	Each email entry returned is a JSON object with the following fields:
