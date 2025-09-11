@@ -139,3 +139,7 @@ The following is an example configuration JSON for common clients (e.g., Claude)
 ```
 
 3. If Claude is running, restart it.
+
+## Notice
+
+Using this client against the hosted service requires an account/API key and is governed by our ToS.
