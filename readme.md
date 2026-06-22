@@ -35,9 +35,8 @@ A Python version can be found [here](https://github.com/mxaiorg/mxmcp-py).
 
 ### Streamable HTTP
 This MCP repo is the 'stdio' variant. HTTP options exist at the following addresses:
-* [https://lab4-api.mxhero.com/mcp/connect](https://lab4-api.mxhero.com/mcp/connect)
+* [https://lab4-mcp.mxhero.com/mcp2/connect](https://lab4-mcp.mxhero.com/mcp/connect)
   (streamable HTTP)
-* [https://lab4-api.mxhero.com/mcp/sse](https://lab4-api.mxhero.com/mcp/sse) (Legacy SSE)
 
 ## Tools implemented
 
@@ -54,8 +53,7 @@ Search stored emails
 
 - GO 1.22 or higher ([download](https://go.dev/doc/install))
 - mxHERO Vector Search credentials (token)
-  - A demo token can be obtained at https://lab4-api.mxhero.com/demo_signup
-  - For production tokens, contact mxHERO.
+  - Personal access tokens can be obtained at https://lab4-mcp.mxhero.com/tokens
 
 ## Installation
 1. Clone the repository

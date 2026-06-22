@@ -2,3 +2,7 @@
 /Makefile-mac-intel
 /python/
 /unpublished/claude_desktop_config.json
+/bin/mxmcp-local
+/bin/mxmcp-mac-arm
+/bin/mxmcp-mac-intel
+/build/

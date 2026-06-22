@@ -4,6 +4,7 @@ import (
 	"encoding/json"
 	"flag"
 	"fmt"
+
 	"github.com/mark3labs/mcp-go/mcp"
 	"github.com/mark3labs/mcp-go/server"
 
@@ -46,13 +47,10 @@ func main() {
 		server.WithRecovery(),
 	)
 
-	search := mcp.NewTool("email_search",
-		mcp.WithDescription(*description),
-		mcp.WithString("query",
-			mcp.Required(),
-			mcp.Description(kQueryArgument),
-		),
-	)
+	// The description flag overrides the default; the structured search fields
+	// (mirroring mxmcp2's structured email_search) follow.
+	opts := append([]mcp.ToolOption{mcp.WithDescription(*description)}, searchToolOptions()...)
+	search := mcp.NewTool("email_search", opts...)
 
 	s.AddTool(search, EmailSearchTool)
 
